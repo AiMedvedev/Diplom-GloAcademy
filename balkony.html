@@ -17,6 +17,7 @@
 	<title>Остекление балконов и лоджий</title>
 	<meta name="keywords" content="остекление, алюминиевое, балконы, лоджии, застеклить, пластиковые, балконы, пвх, цена, утепление, отделка, акции">
 	<meta name="description" content="Установим балконы на балкон и лоджию из пластикового (пвх) или алюминиевого (al) профиля. Утепление и отделка под ключ! Отличные цены и акции!">
+	<script src="./dist/main.js" defer></script>
 
 </head>
 <body class="balkony">
@@ -140,7 +141,7 @@
 			<div class="row">
 				<div class="col-md-12 col-md-6">
 					<div class="form-group">
-						<label for="calc-type" class="text-warning">Балкон/Лоджия</label>
+						<label for="calc-type" class="text-warning" required>Балкон/Лоджия</label>
 						<select name="calc-type" class="form-control form-control-sm" id="calc-type">
 						  <option>--</option>
 						  <option value="1.2">Балкон</option>
@@ -150,7 +151,7 @@
 				</div>
 				<div class="col-md-12 col-md-6">
 					<div class="form-group">
-						<label for="calc-type-material" class="text-warning">Выберите тип остекления</label>
+						<label for="calc-type-material" class="text-warning" required>Выберите тип остекления</label>
 						<select name="calc-type-material" class="form-control form-control-sm" id="calc-type-material">
 						  <option>--</option>
 						  <option value="1">Холодное Аллюминием</option>
@@ -162,14 +163,14 @@
 			<div class="row">
 				<div class="col-md-12 col-md-6">
 					<div class="form-group">
-						<label for="calc-input" class="text-warning">Площадь (м&sup2;)</label>
-						<input name="calc-input" type="number" class="form-control" id="calc-input" placeholder="Площадь (м&sup2;)">
+						<label for="calc-input" class="text-warning" required>Площадь (м&sup2;)</label>
+						<input name="calc-input" type="number" class="form-control" maxlength="4" id="calc-input" placeholder="Площадь (м&sup2;)">
 					  </div>
 				</div>
 				<div class="col-md-12 col-md-6">
 					<div class="form-group">
 						<label for="calc-total" class="text-warning">Итого</label>
-						<input name="calc-total" type="number" class="form-control" id="calc-total" placeholder="Итого" disabled>
+						<span name="calc-total" type="number" class="form-control" id="calc-total" placeholder="Итого" disabled>
 					  </div>
 				</div>
 			</div>

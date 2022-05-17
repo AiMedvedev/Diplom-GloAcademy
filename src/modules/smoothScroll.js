@@ -6,9 +6,9 @@ export const smoothScroll = () => {
         const top = document.documentElement.scrollTop;
         
         if (top > 840) { 
-            body.classList.remove('scroll-invisible'); 
+            btn.style.display = 'block'; 
         } else {
-            body.classList.add('scroll-invisible');
+            btn.style.display = 'none';
         }
     })
   

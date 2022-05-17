@@ -2,7 +2,7 @@ import Swiper, {Navigation} from 'swiper';
 
 export const swiperBenefits = () => {
  
-    const benefits = new Swiper('.mySwiper', {
+    const swiper = new Swiper('.mySwiper', {
         cssMode: true,
         modules: [Navigation],
         slidesPerView: 1,
@@ -10,19 +10,19 @@ export const swiperBenefits = () => {
         breakpoints: {
             576: {
                 slidesPerView: 3,
-                spaceBetweenSlides: 30
+                spaceBetween: 10
             }
         },
         navigation: {
-            nextEl: ".benefits__arrow--left",
-            prevEl: ".benefits__arrow--right",
-        },
+            nextEl: ".benefits__arrow--right",
+            prevEl: ".benefits__arrow--left",
+        }
     });
 }
 
 export const swiperServices = () => {
 
-    const services = new Swiper('.swiperServices', {
+    const swiper = new Swiper('.swiperServices', {
         cssMode: true,
         modules: [Navigation],
         slidesPerView: 1,
@@ -30,12 +30,13 @@ export const swiperServices = () => {
         breakpoints: {
             576: {
                 slidesPerView: 2,
-                spaceBetweenSlides: 20
+                spaceBetween: 20
             }
         },
         navigation: {
-            nextEl: ".services__arrow--left",
-            prevEl: ".services__arrow--right",
+            nextEl: ".services__arrow--right",
+            prevEl: ".services__arrow--left",
         },
+        loop: true
     });
 }
