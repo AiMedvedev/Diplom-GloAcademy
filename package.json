@@ -1,0 +1,25 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "watch": "webpack --watch --mode=development"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AiMedvedev/Middle-Diplom-GLO.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AiMedvedev/Middle-Diplom-GLO/issues"
+  },
+  "homepage": "https://github.com/AiMedvedev/Middle-Diplom-GLO#readme",
+  "description": ""
+}
