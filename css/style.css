@@ -373,6 +373,7 @@ input.error {
   background-color: #f2f2f2;
   background-color: rgba(0, 0, 0, 0.1);
 }
+
 #offer .container {
   height: 700px;
 }
@@ -1597,6 +1598,7 @@ input.error {
 .benefits__item {
   width: 100%;
   max-width: 185px;
+  margin: 0 5px;
 }
 
 .benefits-arrows {
@@ -1681,3 +1683,81 @@ input.error {
   overflow: hidden;
   height: 100%;
 }
+
+
+
+/* Style the Image Used to Trigger the Modal */
+.col-sm-4 {
+  cursor: zoom-in;
+  transition: 0.3s;
+}
+
+.col-sm-4:hover {
+  opacity: 0.7;
+  cursor: zoom-in;
+}
+
+/* The Modal (background) */
+.doc-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.doc-modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.doc-close {
+  position: absolute;
+  top: 80px;
+  right: 210px;
+  color: #f1f1f1;
+  font-size: 24px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.doc-close:hover,
+.doc-close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .doc-modal-content {
+      width: 100%;
+  }
+}
+
+.scroll-invisible {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scroll-invisible::-webkit-scrollbar {
+  display: none;
+}
+

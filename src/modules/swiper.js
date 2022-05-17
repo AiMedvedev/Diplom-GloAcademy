@@ -1,33 +1,38 @@
 import Swiper, {Navigation} from 'swiper';
 
-export const swiper = () => {
+export const swiperBenefits = () => {
  
     const benefits = new Swiper('.mySwiper', {
+        cssMode: true,
         modules: [Navigation],
-        slidesPerView: 3,
-        spaceBetweenSlides: 30,
-        /* breakpoint: {
+        slidesPerView: 1,
+        spaceBetweenSlides: 10,
+        breakpoints: {
             576: {
-                slidesPerView: 1
+                slidesPerView: 3,
+                spaceBetweenSlides: 30
             }
-        }, */
-        centeredSlides: true,
+        },
         navigation: {
             nextEl: ".benefits__arrow--left",
             prevEl: ".benefits__arrow--right",
         },
     });
+}
+
+export const swiperServices = () => {
 
     const services = new Swiper('.swiperServices', {
+        cssMode: true,
         modules: [Navigation],
-        slidesPerView: 2,
-        spaceBetweenSlides: 20,
-        /* breakpoint: {
+        slidesPerView: 1,
+        spaceBetweenSlides: 10,
+        breakpoints: {
             576: {
-                slidesPerView: 1
+                slidesPerView: 2,
+                spaceBetweenSlides: 20
             }
-        }, */
-        centeredSlides: true,
+        },
         navigation: {
             nextEl: ".services__arrow--left",
             prevEl: ".services__arrow--right",
