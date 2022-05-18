@@ -16,10 +16,5 @@ timer('11.07.2022');
 documentModal();
 smoothScroll();
 validation();
-sendForm( {someElem: [
-    {
-        type: 'block',
-        id: 'calc-total'
-    }
-]});
 calculate();
+sendForm();

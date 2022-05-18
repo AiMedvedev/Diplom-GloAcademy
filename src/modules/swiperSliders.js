@@ -14,9 +14,10 @@ export const swiperBenefits = () => {
             }
         },
         navigation: {
-            nextEl: ".benefits__arrow--right",
-            prevEl: ".benefits__arrow--left",
-        }
+            nextEl: ".benefits__arrow--left",
+            prevEl: ".benefits__arrow--right",
+        },
+        loop: true
     });
 }
 
@@ -26,16 +27,15 @@ export const swiperServices = () => {
         cssMode: true,
         modules: [Navigation],
         slidesPerView: 1,
-        spaceBetweenSlides: 10,
         breakpoints: {
             576: {
                 slidesPerView: 2,
-                spaceBetween: 20
+                spaceBetweenSlides: 10,
             }
         },
         navigation: {
-            nextEl: ".services__arrow--right",
-            prevEl: ".services__arrow--left",
+            nextEl: ".services__arrow--left",
+            prevEl: ".services__arrow--right",
         },
         loop: true
     });

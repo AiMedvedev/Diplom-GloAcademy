@@ -1,5 +1,5 @@
 export const phoneModal = () => {
-    const body = document.querySelector('.okna');
+    const body = document.querySelector('body');
     const phoneRequestBtn = document.querySelector('.button');
     const overlay = document.querySelector('.overlay');
     const phoneRequestModal = document.querySelector('.header-modal');
@@ -7,8 +7,8 @@ export const phoneModal = () => {
 
     phoneRequestBtn.addEventListener('click', () => {
         phoneRequestModal.style.display = 'flex';
-        overlay.style.display = 'flex';
         body.classList.add('no-scroll');
+        overlay.style.display = 'flex';
     });
 
     phoneRequestModalCloseBtn.addEventListener('click', () => {

@@ -1,7 +1,7 @@
 import { animate } from './helpers';
 
 export const calculate = () => {
-
+    const body = document.querySelector('.balkony');
     const calcBlock = document.getElementById('calc');
     const area = document.getElementById('calc-input');
     const total = document.getElementById('calc-total');
@@ -33,11 +33,11 @@ export const calculate = () => {
         
         total.textContent = totalValue;
     }
-    
-    calcBlock.addEventListener('change', (e) => {
-        if ((e.target === type) || (e.target === material) || (e.target === area)) {
-            countCalc();
-        }
-    });
-    
+    if (body) {
+        calcBlock.addEventListener('change', (e) => {
+            if ((e.target === type) || (e.target === material) || (e.target === area)) {
+                countCalc();
+            }
+        });
+    }
 }

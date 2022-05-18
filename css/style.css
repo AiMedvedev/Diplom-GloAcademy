@@ -553,7 +553,7 @@ input.error {
 }
 .service-button {
   position: absolute;
-  bottom: 20px;
+  bottom: 15px;
 }
 .service-text {
   background-color: #f5f6f7;
@@ -565,7 +565,7 @@ input.error {
   padding: 20px 20px 55px 20px;
 }
 .service-text h3 {
-  margin: 0px 0px 20px;
+  margin: 0px 0px 10px;
   font-family: "NeoSansCyr-Medium", sans-serif;
 }
 .service-text p {
@@ -780,6 +780,7 @@ p.services-image_mobile {
   display: inline-block;
   position: relative;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  cursor: url('../images/zoom.png');
 }
 .document-overlay {
   background: url("../images/zoom.png") no-repeat center
@@ -789,13 +790,18 @@ p.services-image_mobile {
   height: 100%;
   top: 0;
   left: 0;
-  opacity: 0;
+  opacity: 0; 
 }
 .document-inner:hover .document-overlay {
-  opacity: 1;
+  opacity: 0.6;
   transition: opacity 0.3s linear;
   -webkit-transition: opacity 0.3s linear;
+  cursor: url(../images/zoom.png);
 }
+.document-overlay a:hover {
+  cursor: url('../images/zoom.png');
+}
+
 #contacts {
   background-color: #00902a;
   color: #fff;
@@ -1190,8 +1196,46 @@ p.services-image_mobile {
   .contacts-cart {
     font-size: 18px;
   }
+  
+  .col-md-12 {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .service-text h3 {
+    font-size: 16px;
+  }
+  .service-text p {
+    margin-bottom: 0;
+  }
+  .service-button a {
+    width: 140px;
+    padding: 5px 8px;
+    font-size: 12px;
+    line-height: 2;
+  }
 }
+
 @media (max-width: 992px) {
+  #services .container {
+    width: 590px;
+  }
+  .service-text h3 {
+    font-size: 24px;
+  }
+  .service-text {
+    width: 320px;
+  }
+  .service-button a {
+    width: 240px;
+    padding: 10px 30px;
+    font-size: 16px;
+    line-height: 1;
+  }
+  .col-md-12 {
+    min-width: fit-content;
+    margin-right: 0;
+    margin-left: 0;
+  }
   .countdown {
     margin-bottom: 40px;
   }
@@ -1687,20 +1731,30 @@ input.error {
 
 
 .col-sm-4 {
-  cursor: zoom-in;
+  cursor: url('../images/zoom.png');
   transition: 0.3s;
 }
 
+
+
+.document-overlay:hover {
+  cursor: url('../images/zoom-black.png'), pointer;
+} 
+
 .col-sm-4:hover {
-  opacity: 0.5;
-  cursor: zoom-in;
+  opacity: 0.3;
+  cursor: url('../images/zoom.png');
+}
+
+.col-sm-4 img {
+  background:rgba(0, 0, 0, 0.856);
 }
 
 .doc-modal {
   display: none; 
   position: fixed; 
   z-index: 1; 
-  padding-top: 100px;
+  padding-top: 30px;
   left: 0;
   top: 0;
   width: 100%; 
@@ -1713,7 +1767,6 @@ input.error {
 .doc-modal-content {
   margin: auto;
   display: block;
-  width: 80%;
   max-width: 700px;
   animation-name: zoom;
   animation-duration: 0.6s;
@@ -1726,12 +1779,15 @@ input.error {
 
 .doc-close {
   position: absolute;
-  top: 40px;
-  right: 40px;
+  top: 33px;
+  left: 65%;
   color: #f1f1f1;
   font-size: 24px;
   font-weight: bold;
   transition: 0.3s;
+}
+.doc-close img {
+  height: 20px;
 }
 
 .doc-close:hover,
@@ -1741,18 +1797,6 @@ input.error {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 700px){
-  .doc-modal-content {
-      width: 100%;
-  }
+#img01 {
+  height: inherit;
 }
-/* 
-.scroll-invisible {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.scroll-invisible::-webkit-scrollbar {
-  display: none;
-}
- */

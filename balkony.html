@@ -14,9 +14,11 @@
 	<link href="fonts/font.css" rel="stylesheet" type="text/css">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/animate.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<title>Остекление балконов и лоджий</title>
 	<meta name="keywords" content="остекление, алюминиевое, балконы, лоджии, застеклить, пластиковые, балконы, пвх, цена, утепление, отделка, акции">
 	<meta name="description" content="Установим балконы на балкон и лоджию из пластикового (пвх) или алюминиевого (al) профиля. Утепление и отделка под ключ! Отличные цены и акции!">
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
 	<script src="./dist/main.js" defer></script>
 
 </head>
@@ -182,31 +184,31 @@
     			<div class="heading-image"><i class="benefit-ico"></i></div>
     			<h2 class="heading"><span>Выгоды</span> для клиентов</h2>
     		</div>
-    		<div class="benefits-inner">
-				<div class="benefits-wrap">
+    		<div class="benefits-inner mySwiper">
+				<div class="benefits-wrap swiper-wrapper">
 					<div class="benefits__item">
 						<p class="benefit-image">
 								<img src="images/benefits/4.png" alt="">
 							</p>
 							<p class="benefit-title">Рассрочка без банка </p>
 					</div>
-					<div class="benefits__item">
+					<div class="benefits__item swiper-slide">
 						<p class="benefit-image"><img src="images/benefits/2.png" alt=""></p>
 						<p class="benefit-title">Гарантии от 3 до 10 лет</p>
 					</div>
-					<div class="benefits__item">
+					<div class="benefits__item swiper-slide">
 						<p class="benefit-image"><img src="images/benefits/3.png" alt=""></p>
 						<p class="benefit-title">Индивидуальный подход</p>
 					</div>
-					<div class="benefits__item">
+					<div class="benefits__item swiper-slide">
 						<p class="benefit-image"><img src="images/benefits/1.png" alt=""></p>
 						<p class="benefit-title">Бесплатные консультации</p>
 					</div>
-					<div class="benefits__item">
+					<div class="benefits__item swiper-slide">
 						<p class="benefit-image"><img src="images/benefits/5.png" alt=""></p>
 						<p class="benefit-title">Бесплатный выезд мастера на дом</p>
 					</div>
-					<div class="benefits__item">
+					<div class="benefits__item swiper-slide">
 						<p class="benefit-image"><img src="images/benefits/6.png" alt=""></p>
 						<p class="benefit-title">Окна от лучших производителей</p>
 					</div>
@@ -224,13 +226,13 @@
     		</div>
     </div>
     <div id="services" class="section">
-    	<div class="container">
+    	<div class="container swiper swiperServices">
     		<div class="section-title">
     			<div class="heading-image"><i class="service-ico"></i></div>
     			<h2 class="heading white">Наши <span>услуги</span></h2>
     		</div>
-    		<div class="row">
-	    		<div class="col-md-12 col-lg-6">
+    		<div class="row swiper-wrapper">
+	    		<div class="col-md-12 col-lg-6 swiper-slide">
 	    			<div class="service-block">
 	    				<div class="service-image">
 	    					<img src="images/services/1.jpg" alt="">
@@ -275,7 +277,7 @@
 	    				</div>
 	    			</div>
 	    		</div>
-	    		<div class="col-md-12 col-lg-6">
+	    		<div class="col-md-12 col-lg-6 swiper-slide">
 	    			<div class="service-block">
 	    				<div class="service-image">
 	    					<img src="images/services/2.jpg" alt="">
@@ -316,7 +318,7 @@
 	    				</div>
 	    			</div>
 	    		</div>
-	    		<div class="col-md-12 col-lg-6">
+	    		<div class="col-md-12 col-lg-6 swiper-slide">
 	    			<div class="service-block">
 	    				<div class="service-image">
 	    					<img src="images/services/3.jpg" alt="">
@@ -362,7 +364,7 @@
 	    				</div>
 	    			</div>
 	    		</div>
-	    		<div class="col-md-12 col-lg-6">
+	    		<div class="col-md-12 col-lg-6 swiper-slide">
 	    			<div class="service-block">
 	    				<div class="service-image">
 	    					<img src="images/services/4.jpg" alt="">
@@ -427,15 +429,16 @@
 	    				</div>
 	    			</div>
 	    		</div>
-					<div class="services-arrows">
-					<div class="services__arrow services__arrow--left">
-						<img src="images/benefits/left-arrow.svg" alt="">
-					</div>
-					<div class="services__arrow services__arrow--right">
-						<img src="images/benefits/right-arrow.svg" alt="">
-					</div>
-				</div>	
+						
     		</div>
+			<div class="services-arrows">
+				<div class="services__arrow services__arrow--left">
+					<img src="images/benefits/left-arrow.svg" alt="">
+				</div>
+				<div class="services__arrow services__arrow--right">
+					<img src="images/benefits/right-arrow.svg" alt="">
+				</div>
+			</div>
     	</div>
     </div>
     <div id="order_1" class="order">
@@ -894,6 +897,11 @@
 			</div>
 		</div></div></div>
 		<span title="Close" class="services-modal__close">x</span></div>
+	</div>
+
+	<div id="myModal" class="doc-modal">
+		<div class="doc-close"> <img src="./images/close-button.svg" alt=""> </div>
+		<img class="doc-modal-content" id="img01">
 	</div>
 
 	<div class="smooth-scroll">
