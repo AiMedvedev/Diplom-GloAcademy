@@ -1858,5 +1858,6 @@ input.error {
 .centered-image {
   display: block;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
+  margin-right: 44.66666%;
 }
