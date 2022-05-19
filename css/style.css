@@ -1861,3 +1861,25 @@ input.error {
   margin-right: auto;
   margin-right: 44.66666%;
 }
+
+#responseMessage.show {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+#responseMessage .box-modal_body {
+  height: fit-content;
+  padding-top: 30px;
+}
+.fancyClose {
+  margin: 0 auto;
+  align-self: center;
+  text-align: center;
+  margin-left: 38%;
+  font-size: 24px;
+  height: 52px;
+  width: 90px;
+}

@@ -28,12 +28,15 @@ export const calculate = () => {
         });
         
         total.textContent = totalValue;
+
     }
     if (body) {
         calcBlock.addEventListener('change', (e) => {
             if (((e.target === type) || (e.target === material) || (e.target === area))
              && (type.selectedIndex && material.selectedIndex && area.value)) {
                 countCalc();
+            } else if (!type.selectedIndex || !material.selectedIndex || area.value === '') {
+                total.textContent = 0;
             } else {
                 return;
             }
