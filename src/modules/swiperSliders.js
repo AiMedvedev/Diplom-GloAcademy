@@ -2,7 +2,7 @@ import Swiper, {Navigation} from 'swiper';
 
 export const swiperBenefits = () => {
  
-    const swiper = new Swiper('.mySwiper', {
+    const benefitsSwiper = new Swiper('.mySwiper', {
         cssMode: true,
         modules: [Navigation],
         slidesPerView: 1,
@@ -23,7 +23,7 @@ export const swiperBenefits = () => {
 
 export const swiperServices = () => {
 
-    const swiper = new Swiper('.swiperServices', {
+    const servicesSwiper = new Swiper('.swiperServices', {
         cssMode: true,
         modules: [Navigation],
         slidesPerView: 1,

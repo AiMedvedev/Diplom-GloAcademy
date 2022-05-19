@@ -7,6 +7,7 @@ import {smoothScroll} from "./modules/smoothScroll";
 import {validation} from "./modules/formValidation";
 import {sendForm} from "./modules/sendForm";
 import {calculate} from "./modules/calculator";
+import {reviews} from "./modules/reviews";
 
 phoneModal();
 swiperBenefits();
@@ -18,3 +19,4 @@ smoothScroll();
 validation();
 calculate();
 sendForm();
+reviews();

@@ -1,10 +1,10 @@
 export const phoneModal = () => {
-    const body = document.querySelector('body');
-    const phoneRequestBtn = document.querySelector('.button');
+    const body = document.querySelector('.okna, .balkony, .kuhni');
+    const phoneRequestBtn = document.querySelector('#header .button');
     const overlay = document.querySelector('.overlay');
     const phoneRequestModal = document.querySelector('.header-modal');
     const phoneRequestModalCloseBtn = phoneRequestModal.querySelector('.header-modal__close');
-
+    
     phoneRequestBtn.addEventListener('click', () => {
         phoneRequestModal.style.display = 'flex';
         body.classList.add('no-scroll');

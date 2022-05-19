@@ -1221,6 +1221,11 @@ p.services-image_mobile {
   #services .container {
     width: 590px;
   }
+
+  #benefits .container {
+    max-width: 600px;
+  }
+
   .service-text h3 {
     font-size: 20px;
     margin: 0;
@@ -1339,6 +1344,8 @@ p.services-image_mobile {
     border-radius: 50px;
   }
 }
+
+
 @media (max-width: 767px) {
 
   #benefits .col-md-4:last-child .benefit-title {
@@ -1368,6 +1375,7 @@ p.services-image_mobile {
     max-width: 75%;
   }
 }
+
 @media (max-width: 580px) {
   #services .container {
     width: 400px;
@@ -1415,6 +1423,13 @@ p.services-image_mobile {
     width: 100%;
   }
 }
+
+@media (max-width: 580px) {
+  #benefits .container {
+    max-width: 200px;
+  }
+}
+
 @media (max-width: 480px) {
   #services .container {
     width: 340px;
@@ -1838,4 +1853,10 @@ input.error {
 
 #img01 {
   height: inherit;
+}
+
+.centered-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
 }

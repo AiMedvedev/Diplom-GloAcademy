@@ -14,29 +14,28 @@ export const calculate = () => {
         const calcMaterialValue = +material.options[material.selectedIndex].value;
         const calcAreaValue = +area.value;
         let totalValue;
-
-        if (type.value && material.value && area.value) {
-            totalValue = calcTypeValue * calcMaterialValue * calcAreaValue;
-            animate({
-                duration: 1000,
-                timing(timeFraction) {
-                    return timeFraction;
-                },
-                draw(progress) {
-                    
-                    total.textContent = Math.floor(progress * totalValue);
-                }
-            });
-        } else {
-            totalValue = 0;
-        }
+        
+        totalValue = +calcTypeValue * +calcMaterialValue * +calcAreaValue;
+        animate({
+            duration: 1000,
+            timing(timeFraction) {
+                return timeFraction;
+            },
+            draw(progress) {
+                
+                total.textContent = Math.floor(progress * totalValue);
+            }
+        });
         
         total.textContent = totalValue;
     }
     if (body) {
         calcBlock.addEventListener('change', (e) => {
-            if ((e.target === type) || (e.target === material) || (e.target === area)) {
+            if (((e.target === type) || (e.target === material) || (e.target === area))
+             && (type.selectedIndex && material.selectedIndex && area.value)) {
                 countCalc();
+            } else {
+                return;
             }
         });
     }
