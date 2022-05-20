@@ -14,10 +14,9 @@ export const swiperBenefits = () => {
             }
         },
         navigation: {
-            nextEl: ".benefits__arrow--left",
-            prevEl: ".benefits__arrow--right",
-        },
-        loop: true
+            nextEl: ".benefits__arrow--right",
+            prevEl: ".benefits__arrow--left",
+        }
     });
 }
 
@@ -34,8 +33,8 @@ export const swiperServices = () => {
             }
         },
         navigation: {
-            nextEl: ".services__arrow--left",
-            prevEl: ".services__arrow--right",
+            nextEl: ".services__arrow--right",
+            prevEl: ".services__arrow--left",
         },
         loop: true
     });

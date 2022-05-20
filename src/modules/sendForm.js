@@ -9,27 +9,31 @@ export const sendForm = () => {
             
             const userName = form.querySelector('input[name="fio"]');
             const userPhone = form.querySelector('input[name="phone"]');
-            const body = document.querySelector('.balkony');
+            const pages = document.querySelectorAll('body');
             const replyModal = document.querySelector('.box-modal#responseMessage');
             const closeBtn = replyModal.querySelector('.btn.btn-success.fancyClose');
-            let orderValue;
+            const overlay = document.querySelector('.overlay');
+            const phoneRequestModal = document.querySelector('.header-modal');
+            const servicesModal = document.querySelector('.services-modal');
+            const total = document.getElementById('calc-total');
 
-            const data = {
+            let data = {
                 name: userName.value,
                 phone: userPhone.value,
-                orderPrice: orderValue
+                orderPrice: 0
             };
+            
 
-            console.log(replyModal);
-
-            if (body) {
-                const total = document.getElementById('calc-total');
-                orderValue = total.innerHTML;
-            } else {
-                orderValue = 0;
+            if (total) {
+                if (total.textContent !== null && total.textContent !== 0) {
+                    data.orderPrice = total.textContent;
+                }
             }
-
-            fetch('https://jsonplaceholder.typicode.com/posts', {
+            
+            if (!((/[\d- ]{7,16}/).test(userPhone.value) && userPhone.value.match(/\d/g).length===7)) {
+                return;
+            } else {
+                fetch('https://jsonplaceholder.typicode.com/posts', {
                     method: 'POST',
                     body: JSON.stringify(data),
                     headers: {
@@ -38,16 +42,25 @@ export const sendForm = () => {
                 })
                 .then(res => res.json())
                 .catch(error => error.message);
-
+            
             userName.value = '';
             userPhone.value = '';
+            
+            phoneRequestModal.style.display = 'none';
+            servicesModal.style.display = 'none';
+            overlay.style.display = 'none';
+
+            pages.forEach(body => {
+                body.classList.remove('no-scroll');
+            });
             
             replyModal.classList.add('show');
 
             closeBtn.addEventListener('click', (e) => {
                 e.preventDefault();
                 replyModal.classList.remove('show');
-            })
+            });
+            }
         }));
     });
 }
