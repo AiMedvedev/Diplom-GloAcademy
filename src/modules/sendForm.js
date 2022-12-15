@@ -5,7 +5,7 @@ export const sendForm = () => {
     
     pages.forEach(body => {
         const forms = document.querySelectorAll('.order-form.rf, .box-modal_body.rf');
-        console.log(forms);
+       /*  console.log(forms); */
         forms.forEach(form => {
             form.addEventListener('submit', (e => {
                 e.preventDefault();

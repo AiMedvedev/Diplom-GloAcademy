@@ -7,7 +7,7 @@ export const calculate = () => {
     const total = document.getElementById('calc-total');
     const type = document.getElementById('calc-type');
     const material = document.getElementById('calc-type-material');
-
+    
     const countCalc = () => {
 
         const calcTypeValue = +type.options[type.selectedIndex].value;
