@@ -6,22 +6,12 @@
     "build": "webpack --mode=production",
     "watch": "webpack --watch --mode=development"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Aleksandr Medvedev",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^5.72.1",
-    "webpack-cli": "^4.9.2"
+    "webpack": "^5.89.0",
+    "webpack-cli": "^4.10.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AiMedvedev/Middle-Diplom-GLO.git"
-  },
-  "bugs": {
-    "url": "https://github.com/AiMedvedev/Middle-Diplom-GLO/issues"
-  },
-  "homepage": "https://github.com/AiMedvedev/Middle-Diplom-GLO#readme",
-  "description": "",
   "dependencies": {
     "swiper": "^8.1.5"
   }
