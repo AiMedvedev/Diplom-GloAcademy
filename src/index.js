@@ -13,7 +13,7 @@ phoneModal();
 swiperBenefits();
 swiperServices();
 servicesModal();
-timer('13 january 2023');
+timer('13 january 2024');
 documentModal();
 smoothScroll();
 validation();
